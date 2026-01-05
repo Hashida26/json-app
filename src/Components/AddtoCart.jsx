@@ -58,7 +58,7 @@ function AddtoCart() {
         </h1>
 
         {cartitem.length === 0 ? (
-          <p className="text-gray-600 text-lg">Your cart is empty.</p>
+          <p className="text-gray-600 text-lg">Your cart is empty...</p>
         ) : (
           <div className="w-full max-w-md flex flex-col gap-4">
             {/* Cart Items */}
