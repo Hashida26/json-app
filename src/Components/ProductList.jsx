@@ -11,7 +11,7 @@ function ProductList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/laptops")
+        const response = await axios.get("http://localhost:10000/laptops")
         setitems(response.data)
 
       } catch (error) {
@@ -28,7 +28,7 @@ function ProductList() {
   },[])
  const deleteProduct = async (id) => {
   try {
-    const response = await axios.delete(`http://localhost:3000/laptops/${id}`);
+    const response = await axios.delete(`http://localhost:10000/laptops/${id}`);
     console.log("Deleted:", response.data);
  setitems((prev) => prev.filter((item) => item.id !== id)) 
   } catch (error) {
