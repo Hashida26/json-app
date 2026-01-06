@@ -17,6 +17,12 @@
       "brand": "lenovo 123",
       "model": "Think pad",
       "price": 12343
+    },
+    {
+      "id": "8e7f",
+      "brand": "nihal",
+      "model": "Think pad",
+      "price": 1234
     }
   ],
   "cart": []

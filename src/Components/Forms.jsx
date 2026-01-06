@@ -20,7 +20,7 @@ function ProductForm() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:10000/laptops/${id}`)
+        .get(`https://json-backend-qcci.onrender.com/laptops/${id}`)
         .then((res) => setInitialValues(res.data))
         .catch((err) => console.error("Error fetching:", err));
     }
@@ -30,7 +30,7 @@ function ProductForm() {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       if (id) {
-        await axios.put(`http://localhost:10000/laptops/${id}`, values);
+        await axios.put(`https://json-backend-qcci.onrender.com/laptops/${id}`, values);
         Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -40,7 +40,7 @@ function ProductForm() {
         toast: true
       });
       } else {
-        await axios.post("http://localhost:10000/laptops", values);
+        await axios.post("https://json-backend-qcci.onrender.com/laptops", values);
         Swal.fire({
         position: 'top-end',
         icon: 'success',
