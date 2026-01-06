@@ -15,7 +15,7 @@ function ProductDetailes() {
     useEffect(()=>{
         const fetchdata=async()=>{
             try{
-         const response=await axios.get(`http://localhost:5000/laptops/${id}`)
+         const response=await axios.get(`https://json-backend-qcci.onrender.com/laptops/${id}`)
             setitems(response.data)
 
             console.log(response);
@@ -35,7 +35,7 @@ function ProductDetailes() {
 
     const handleaddtoCart=async()=>{
       try {
-        const check=await axios.get(`http://localhost:5000/cart?id=${items.id}`)
+        const check=await axios.get(`https://json-backend-qcci.onrender.com/cart?id=${items.id}`)
       if(check.data.length>0){
          Swal.fire({
               position: 'top-end',
@@ -48,7 +48,7 @@ function ProductDetailes() {
 
       }
       else{
-        await axios.post('http://localhost:5000/cart',items)
+        await axios.post('https://json-backend-qcci.onrender.com/cart',items)
         Swal.fire({
               position: 'top-end',
               icon: 'success',

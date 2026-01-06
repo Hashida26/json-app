@@ -19,7 +19,7 @@ function AddProduct() {
           validationSchema={ValidationSchema}
           onSubmit={async (values, { resetForm }) => {
             try {
-              await axios.post("http://localhost:5000/laptops", values);
+              await axios.post("https://json-backend-qcci.onrender.com/laptops", values);
               alert("Laptop added successfully!");
 
               console.log(values);

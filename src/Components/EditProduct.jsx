@@ -18,7 +18,7 @@ function EditProduct() {
     useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/laptops/${id}`);
+        const response = await axios.get(`https://json-backend-qcci.onrender.com/laptops/${id}`);
         setInitialValues(response.data);
       } catch (error) {
         console.log(error);
@@ -31,7 +31,7 @@ function EditProduct() {
  
   const handleSubmit = async (values,{resetForm}) => {
     try {
-      await axios.put(`http://localhost:5000/laptops/${id}`, values);
+      await axios.put(`https://json-backend-qcci.onrender.com/laptops/${id}`, values);
       alert("Product updated successfully!");
       navigate("/");
       resetForm();

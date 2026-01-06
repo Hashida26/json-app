@@ -13,7 +13,7 @@ function AddtoCart() {
 
     const fetchCart=async()=>{
         try {
-            const response=await axios.get("http://localhost:5000/cart")
+            const response=await axios.get("https://json-backend-qcci.onrender.com/cart")
             setcartitem(response.data)
             
         } catch (error) {
@@ -33,7 +33,7 @@ function AddtoCart() {
     }
     const delateCart=async(id)=>{
         try {
-             const response=await axios.delete(`http://localhost:5000/cart/${id}`)
+             const response=await axios.delete(`https://json-backend-qcci.onrender.com/cart/${id}`)
         setcartitem(((prev) => prev.filter((item) => item.id !== id)) )
 
     }
